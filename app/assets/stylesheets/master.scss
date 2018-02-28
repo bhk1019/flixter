@@ -1,1 +1,13 @@
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Averia+Serif+Libre:400,400i,700,700i');
+
+.navbar {
+  font-family: 'Averia Serif Libre', cursive;
+  font-weight: 200px;
+  background: image_url('white_texture');
+}
+
+.navbar-light a.navbar-brand {
+  font-family: 'Averia Serif Libre', cursive;
+  font-weight: bold;
+}
