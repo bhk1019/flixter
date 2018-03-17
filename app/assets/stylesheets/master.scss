@@ -83,3 +83,28 @@ body {
 .clr {
   clear: both;
 }
+
+.lesson {
+  background-color: #bcb8b1;
+  margin-top: 10px;
+  min-height: 130px;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+.lesson a {
+  color: black;
+  font-size: 15px;
+}
+
+.lesson a b {
+  font-weight: 100;
+  font-size: 25px;
+}
+
+.section {
+  border: 1px solid;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  padding: 20px;
+  background-color: #f7f2e8;
+}
