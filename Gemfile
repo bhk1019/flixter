@@ -71,3 +71,6 @@ gem 'carrierwave-aws'
 
 # Payments
 gem 'stripe'
+
+# Lesson Pages
+gem 'ranked-model'
