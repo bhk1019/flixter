@@ -74,3 +74,4 @@ gem 'stripe'
 
 # Lesson Pages
 gem 'ranked-model'
+gem 'jquery-ui-rails'
