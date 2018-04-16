@@ -11,6 +11,19 @@
       }
     });
   });
+
+  $(function() {
+    $('.sections').sortable({
+      update: function( event, ui ) {
+        $.ajax({
+          type: 'PUT',
+          url: ui.item.data('update-url'),
+          dataType: 'json',
+          data: { section: { row_order_position: ui.item.index() }}
+        });
+      }
+    });
+  });
 </script>
 
 <br />
@@ -28,12 +41,11 @@
 
   <h4 class="text-center">Sections</h4>
   <br />
-  <ul>
-    <% current_course.sections.each do |section| %>
-      <li>
+  <ul class="sections">
+    <% current_course.sections.rank(:row_order).each do |section| %>
+      <li data-update-url="<%= instructor_section_path(section) %>">
         <%= section.title %>
         <%= link_to "New Lesson", new_instructor_section_lesson_path(section), class: 'btn btn-primary btn-sm float-right' %>
-        <br class="clr" />
         <ul class="lessons">
           <% section.lessons.rank(:row_order).each do |lesson| %>
             <li data-update-url="<%= instructor_lesson_path(lesson) %>">
@@ -43,7 +55,6 @@
             </li>
           <% end %>
         </ul>
-        <br class='clr' />
       </li>
     <% end %>
   </ul>
