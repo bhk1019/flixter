@@ -21,9 +21,18 @@ body {
   font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
   padding: 10px 0px;
   margin-top: 30px;
+  font-weight: 100;
 }
 
 #footer a {
   color: rgb(229, 225, 181);
   font-weight: 100;
+}
+
+.social-button {
+  margin: 4px;
+}
+
+.social a:hover {
+  text-decoration: none;
 }
